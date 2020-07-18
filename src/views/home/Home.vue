@@ -3,17 +3,21 @@
     <nav-bar class="home-nav">
       <div slot="center">购物街</div>
     </nav-bar>
+    <home-swiper :banners="banners"></home-swiper>
   </div>
 </template>
 
 <script>
 import NavBar from "components/common/navbar/NavBar";
+import HomeSwiper from "./childComps/HomeSwiper";
+
 import { getHomeMultidata } from "network/home.js";
 
 export default {
   name: "Home",
   components: {
-    NavBar
+    NavBar,
+    HomeSwiper
   },
   data() {
     return {
@@ -36,4 +40,13 @@ export default {
   background-color: var(--color-tint);
   color: #fff;
 }
+/* .love {
+  width: 100%;
+  height: 100px;
+  color: pink;
+  font-weight: 700;
+  font-size: 44px;
+  text-align: center;
+  margin-top: 200px;
+} */
 </style>
