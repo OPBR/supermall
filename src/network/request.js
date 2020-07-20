@@ -3,8 +3,7 @@ import axios from 'axios'
 export function request(config) {
   // 创建axios实例
   const instance = axios.create({
-    // 需要接口添加老师微信coderwhy002
-    baseURL: 'XXX',
+    baseURL: 'test',
     timeout: 5000
   })
 

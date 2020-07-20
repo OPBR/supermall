@@ -1,11 +1,11 @@
 .DS_Store
 node_modules
 /dist
+/src/network/request.js
 
 # local env files
 .env.local
 .env.*.local
-request.js
 
 # Log files
 npm-debug.log*
