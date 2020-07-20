@@ -1,6 +1,7 @@
 # supermall
 
 ## Project setup
+> 新接口请添加老师coderwhy002微信获取
 ```
 npm install
 ```

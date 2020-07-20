@@ -3,7 +3,7 @@ import axios from 'axios'
 export function request(config) {
   // 创建axios实例
   const instance = axios.create({
-    baseURL: '新接口获取请添加老师微信coderwhy003',
+    baseURL: 'http://123.207.32.32:8000/api/m3',
     timeout: 5000
   })
 
