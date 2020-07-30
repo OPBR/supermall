@@ -9,6 +9,22 @@ const Profile = () => import('views/profile/Profile.vue')
 // 1. 安装插件
 Vue.use(VueRouter)
 
+/**
+ * Replace版本
+ */
+const originalReplace = VueRouter.prototype.replace;
+VueRouter.prototype.replace = function replace(location) {
+  return originalReplace.call(this, location).catch(err => err);
+}
+
+/**
+ * Push版本
+ */
+/* const originalPush = VueRouter.prototype.push
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+} */
+
 // 2. 创建router
 const routes = [
   {
@@ -36,5 +52,6 @@ const router = new VueRouter({
   routes,
   mode: 'history'
 })
+
 
 export default router

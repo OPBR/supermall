@@ -1,9 +1,9 @@
 <template>
   <div class="goods-item">
-    <img :src="goodsItem.show.img" alt />
+    <img :src="goodsItem.show.img" alt @load="imageLoad"/>
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>
-      <span class="price">{{goodsItem.price}}</span>
+      <span class="price">{{'￥' + goodsItem.price}}</span>
       <span class="collect">{{goodsItem.cfav}}</span>
     </div>
   </div>
@@ -19,7 +19,13 @@ export default {
         return {};
       }
     }
-  }
+  },
+  methods: {
+    imageLoad() {
+      // 在原型中添加$bus属性
+      this.$bus.$emit('itemImageLoad')
+    }
+  },
 };
 </script>
 
